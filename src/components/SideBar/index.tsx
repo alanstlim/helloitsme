@@ -1,10 +1,9 @@
 import React from 'react';
 import { FaLinkedin } from 'react-icons/fa';
-import { SiGithub, SiGmail } from 'react-icons/si';
+import { SiGithub } from 'react-icons/si';
 import { VscFilePdf } from 'react-icons/vsc';
 import eu from '../../assets/eu.jpg';
 import { colors } from '../../styles/colors';
-import { Button } from '../Button';
 import { Container, InfoContent, Profile, Title } from './styles';
 
 export const SideBar: React.FC = () => {
@@ -32,18 +31,27 @@ export const SideBar: React.FC = () => {
       <InfoContent>
         <h3>Fast Travel :</h3>
         <div>
-          <Button>
+          <a
+            href="https://www.linkedin.com/in/alanstlim/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaLinkedin color={colors.primaryBlue} />
-          </Button>
-          <Button>
-            <SiGmail color={colors.primaryOrange} />
-          </Button>
-          <Button>
+          </a>
+          <a
+            href="https://github.com/alanstlim/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <SiGithub />
-          </Button>
-          <Button>
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1468mZ6dCGiFsEV9NEFrurY7CtRZvJ-YC/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
             <VscFilePdf color={colors.primaryOrange} />
-          </Button>
+          </a>
         </div>
       </InfoContent>
     </Container>

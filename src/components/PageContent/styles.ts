@@ -18,7 +18,7 @@ export const BackgroundContent = styled.div`
 
   svg {
     fill: ${colors.opacityBlue20};
-    font-size: 23.75rem;
+    font-size: 15rem;
     animation: spin 60s linear infinite;
 
     @keyframes spin {
