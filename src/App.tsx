@@ -1,7 +1,6 @@
 import React from 'react';
-import { Header } from './components/Header';
 import { SideBar } from './components/SideBar';
-import { Portfolio } from './pages/Portfolio';
+import { Routes } from './routes';
 import GlobalStyle, { Container, Content } from './styles/global';
 
 export const App: React.FC = () => {
@@ -10,8 +9,7 @@ export const App: React.FC = () => {
       <GlobalStyle />
       <SideBar />
       <Content>
-        <Header />
-        <Portfolio />
+        <Routes />
       </Content>
     </Container>
   );

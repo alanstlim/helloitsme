@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   FaGitAlt,
   FaGithub,
@@ -8,7 +8,6 @@ import {
 } from 'react-icons/fa';
 import { SiCss3, SiTypescript } from 'react-icons/si';
 import { PageContent } from '../../components/PageContent';
-import { api } from '../../services/api';
 import {
   Container,
   ImageContent,
@@ -18,12 +17,6 @@ import {
 } from './styles';
 
 export const Portfolio: React.FC = () => {
-  useEffect(() => {
-    api.get('/projects').then(result => {
-      console.log(result);
-    });
-  }, []);
-
   return (
     <PageContent>
       <Container>
