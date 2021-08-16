@@ -36,6 +36,7 @@ export default createGlobalStyle`
 export const Container = styled.div`
   display: flex;
   height: 100vh;
+  overflow-y: hidden;
   background-color: ${colors.primaryGray};
 `;
 

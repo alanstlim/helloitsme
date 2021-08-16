@@ -7,6 +7,10 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 1rem;
   gap: 1rem;
+
+  h2 {
+    color: ${colors.primaryBlack};
+  }
 `;
 
 export const Project = styled.div`

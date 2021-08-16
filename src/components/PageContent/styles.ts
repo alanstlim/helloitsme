@@ -4,8 +4,8 @@ import { colors } from '../../styles/colors';
 export const Container = styled.div`
   border-radius: 0.625rem;
   margin: 1rem;
+  padding: 1rem;
   height: Calc(100vh - 4.6875rem);
-  overflow-y: scroll;
   background-color: ${colors.primaryWhite};
   z-index: 999;
 `;

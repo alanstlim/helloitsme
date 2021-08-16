@@ -4,8 +4,8 @@ import { colors } from '../../styles/colors';
 export const Container = styled.div`
   flex: 1;
   display: flex;
-  padding: 1rem;
   flex-direction: column;
+  padding: 1rem;
   gap: 1rem;
 `;
 

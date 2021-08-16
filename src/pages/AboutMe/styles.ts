@@ -2,19 +2,17 @@ import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 
 export const Container = styled.div`
-  flex: 1;
   height: 100%;
-  display: flex;
-  gap: 2rem;
-  padding: 1rem;
+
   flex-direction: column;
-  justify-content: space-around;
+  overflow-y: auto;
 `;
 
 export const TitleContent = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 1rem;
   gap: 2rem;
 `;
 
@@ -31,8 +29,10 @@ export const SubTitle = styled.h2`
 
 export const CardsContent = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 0 2rem;
+  margin-top: 5rem;
   gap: 2.5rem;
 `;
 

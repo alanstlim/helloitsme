@@ -3,7 +3,7 @@ import { IconBaseProps } from 'react-icons/lib';
 import { Container } from './styles';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  icon?: React.ComponentType<IconBaseProps>;
+  Icon?: React.ComponentType<IconBaseProps>;
 };
 
 export const Button: React.FC<ButtonProps> = ({ children, ...rest }) => {
