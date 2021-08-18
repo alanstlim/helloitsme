@@ -1,27 +1,25 @@
-import React, { ButtonHTMLAttributes } from 'react';
+import React from 'react';
 import { IconBaseProps } from 'react-icons/lib';
 import { colors } from '../../styles/colors';
 import { Container } from './styles';
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+type NotFoundProps = {
+  message: string;
   Icon?: React.ComponentType<IconBaseProps>;
   iconColor?: string;
-  iconSize?: string;
+  iconSize?: number;
 };
 
-export const Button: React.FC<ButtonProps> = ({
-  children,
+export const NotFound: React.FC<NotFoundProps> = ({
+  message,
   Icon,
   iconColor = colors.primaryWhite,
   iconSize = 16,
-  ...rest
 }) => {
   return (
     <Container>
       {Icon && <Icon color={iconColor} size={iconSize} />}
-      <button type="button" {...rest}>
-        {children}
-      </button>
+      <h2>{message}</h2>
     </Container>
   );
 };

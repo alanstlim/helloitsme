@@ -7,15 +7,11 @@ import {
   FaReact,
 } from 'react-icons/fa';
 import { SiCss3, SiTypescript } from 'react-icons/si';
+import { GiHastyGrave } from 'react-icons/gi';
+import { NotFound } from '../../components/NotFound';
 import { PageContent } from '../../components/PageContent';
 import { api } from '../../services/api';
-import {
-  Container,
-  ImageContent,
-  InfoContent,
-  Project,
-  Technologies,
-} from './styles';
+import { ImageContent, InfoContent, Project, Technologies } from './styles';
 
 type ProjectData = {
   id: string;
@@ -37,39 +33,41 @@ export const Portfolio: React.FC = () => {
 
   return (
     <PageContent>
-      <Container>
-        {projects.length > 0 ? (
-          projects.map((project: ProjectData) => (
-            <Project key={project.id}>
-              <ImageContent>
-                <img src={project.urlImg} alt={project.name} />
-              </ImageContent>
-              <InfoContent>
-                <div>
-                  <h2> - {project.name} - </h2>
-                  <h2>About :</h2>
-                  <h4>{project.about}</h4>
-                </div>
-                <div>
-                  <h2>Functionalities :</h2>
-                  <h4>{project.functionalities}</h4>
-                </div>
-                <Technologies>
-                  <FaHtml5 />
-                  <SiCss3 />
-                  <FaJsSquare />
-                  <SiTypescript />
-                  <FaReact />
-                  <FaGitAlt />
-                  <FaGithub />
-                </Technologies>
-              </InfoContent>
-            </Project>
-          ))
-        ) : (
-          <h2>Not found any project.</h2>
-        )}
-      </Container>
+      {projects.length > 0 ? (
+        projects.map((project: ProjectData) => (
+          <Project key={project.id}>
+            <ImageContent>
+              <img src={project.urlImg} alt={project.name} />
+            </ImageContent>
+            <InfoContent>
+              <div>
+                <h2> - {project.name} - </h2>
+                <h2>About :</h2>
+                <h4>{project.about}</h4>
+              </div>
+              <div>
+                <h2>Functionalities :</h2>
+                <h4>{project.functionalities}</h4>
+              </div>
+              <Technologies>
+                <FaHtml5 />
+                <SiCss3 />
+                <FaJsSquare />
+                <SiTypescript />
+                <FaReact />
+                <FaGitAlt />
+                <FaGithub />
+              </Technologies>
+            </InfoContent>
+          </Project>
+        ))
+      ) : (
+        <NotFound
+          message="Projects has not found!"
+          Icon={GiHastyGrave}
+          iconSize={32}
+        />
+      )}
     </PageContent>
   );
 };

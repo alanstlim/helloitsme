@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 
-export const Container = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  gap: 1rem;
-`;
-
 export const WorkCard = styled.div`
   flex: 1;
   display: flex;

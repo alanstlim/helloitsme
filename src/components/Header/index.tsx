@@ -26,7 +26,7 @@ export const Header: React.FC = () => {
       <Button onClick={() => handlePath('/Curriculum')}>
         <h3>Curriculum</h3>
       </Button>
-      <Button onClick={() => handlePath('/Login')}>
+      <Button onClick={() => handlePath('/Dashboard')}>
         <h3>Dashboard</h3>
       </Button>
     </Container>

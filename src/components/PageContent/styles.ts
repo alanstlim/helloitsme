@@ -2,12 +2,18 @@ import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 
 export const Container = styled.div`
+  flex: 1;
   border-radius: 0.625rem;
   margin: 1rem;
   padding: 1rem;
-  height: Calc(100vh - 4.6875rem);
+  height: Calc(100vh - 15.6875rem);
   background-color: ${colors.primaryWhite};
   z-index: 999;
+`;
+
+export const Content = styled.div`
+  height: 100%;
+  overflow-y: auto;
 `;
 
 export const BackgroundContent = styled.div`

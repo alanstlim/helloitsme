@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../styles/colors';
 
-export const Container = styled.div`
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-`;
-
 export const FormContent = styled.div`
   display: flex;
   flex-direction: column;
