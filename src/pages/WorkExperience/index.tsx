@@ -67,9 +67,9 @@ export const WorkdExperience: React.FC = () => {
           <Description>Abril 2021 - Atual</Description>
         </div>
         <Description>
-          Criação do website do Departamento de Engenharia de Transportes usando
-          wordpress, e criação de software Java para o laboratório de
-          topografia.
+          - Criação do website do Departamento de Engenharia de Transportes
+          usando wordpress.
+          <br />- Criação de software Java para o laboratório de topografia.
         </Description>
         <hr />
       </WorkCard>

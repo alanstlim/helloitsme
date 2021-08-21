@@ -10,31 +10,20 @@ import { SiCss3, SiTypescript } from 'react-icons/si';
 import { GiHastyGrave } from 'react-icons/gi';
 import { NotFound } from '../../components/NotFound';
 import { PageContent } from '../../components/PageContent';
-import { api } from '../../services/api';
+import { getProjects, ProjectData } from '../../services/projects.service';
 import { ImageContent, InfoContent, Project, Technologies } from './styles';
 
-type ProjectData = {
-  id: string;
-  name: string;
-  about: string;
-  urlImg: string;
-  functionalities: string;
-  technologies: string;
-};
-
 export const Portfolio: React.FC = () => {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState<ProjectData[]>([]);
 
   useEffect(() => {
-    api.get('/projects').then(result => {
-      setProjects(result.data);
-    });
+    getProjects().then(result => setProjects(result.data));
   }, []);
 
   return (
     <PageContent>
       {projects.length > 0 ? (
-        projects.map((project: ProjectData) => (
+        projects.map(project => (
           <Project key={project.id}>
             <ImageContent>
               <img src={project.urlImg} alt={project.name} />
@@ -63,7 +52,7 @@ export const Portfolio: React.FC = () => {
         ))
       ) : (
         <NotFound
-          message="Projects has not found!"
+          message="Projects not found!"
           Icon={GiHastyGrave}
           iconSize={32}
         />
