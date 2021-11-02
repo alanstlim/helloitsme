@@ -4,7 +4,7 @@ import { PageContent } from '../../components/PageContent';
 import { getProjects, ProjectData } from '../../services/projects.service';
 import {
   getWorksExperience,
-  WorksExperience,
+  WorksExperienceData,
 } from '../../services/worksExperience.service';
 import {
   CardProject,
@@ -18,7 +18,9 @@ export const Dashboard: React.FC = () => {
   const user = true;
 
   const [projects, setProjects] = useState<ProjectData[]>([]);
-  const [worksExperience, setWorksExperience] = useState<WorksExperience[]>([]);
+  const [worksExperience, setWorksExperience] = useState<WorksExperienceData[]>(
+    [],
+  );
 
   useEffect(() => {
     getProjects().then(result => setProjects(result.data));
